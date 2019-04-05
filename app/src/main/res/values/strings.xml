@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">APP</string>
     <string name="action_settings">Settings</string>
-    <string name="helloW">Hello World!</string>
+    <string name="helloW">Wellcome to my App!</string>
     <string name="go">GO</string>
+    <string name="lastname">Last Name</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="wellcome_to_the_app">Wellcome to the App</string>
 </resources>

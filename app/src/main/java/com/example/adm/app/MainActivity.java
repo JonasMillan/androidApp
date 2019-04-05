@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        // we create cariables with the text inputs
+        final TextInputEditText txtNombre = findViewById(R.id.name);
 
         // HOW TO GO TO A OTHER ACTIVITY (page or view)
         //find button and down cast to the right object, now we have the correct object to do things with it
@@ -33,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
                 // getApplicationContext() allow us to know were we are
                 // SendActivity.class is the activity were we are going to use after the click
                 Intent intent = new Intent(getApplicationContext(), SendActivity.class);
+                //we  send data with the intent using the method putExtra
+                intent.putExtra("name", txtNombre.getText().toString());
+                //intent.putExtra("lastName", txtlasN.getText().toString());
+
                 // startActivity(Intend intend) function allow us to start the activity with the intent that we just created
                 startActivity(intent);
             }
